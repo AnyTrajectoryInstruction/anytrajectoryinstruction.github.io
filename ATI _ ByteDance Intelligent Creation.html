@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)https://bytedance.github.io/InfiniteYou/ -->
+<html class="fontawesome-i2svg-active fontawesome-i2svg-complete"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="description" content="ATI: Any Trajectory Instruction for Controllable Video Generation">
+  <meta name="keywords" content="ATI: Any Trajectory Instruction for Controllable Video Generation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>InfiniteYou | ByteDance Intelligent Creation</title>
+
+  <style type="text/css">svg:not(:root).svg-inline--fa{overflow:visible}.svg-inline--fa{display:inline-block;font-size:inherit;height:1em;overflow:visible;vertical-align:-.125em}.svg-inline--fa.fa-lg{vertical-align:-.225em}.svg-inline--fa.fa-w-1{width:.0625em}.svg-inline--fa.fa-w-2{width:.125em}.svg-inline--fa.fa-w-3{width:.1875em}.svg-inline--fa.fa-w-4{width:.25em}.svg-inline--fa.fa-w-5{width:.3125em}.svg-inline--fa.fa-w-6{width:.375em}.svg-inline--fa.fa-w-7{width:.4375em}.svg-inline--fa.fa-w-8{width:.5em}.svg-inline--fa.fa-w-9{width:.5625em}.svg-inline--fa.fa-w-10{width:.625em}.svg-inline--fa.fa-w-11{width:.6875em}.svg-inline--fa.fa-w-12{width:.75em}.svg-inline--fa.fa-w-13{width:.8125em}.svg-inline--fa.fa-w-14{width:.875em}.svg-inline--fa.fa-w-15{width:.9375em}.svg-inline--fa.fa-w-16{width:1em}.svg-inline--fa.fa-w-17{width:1.0625em}.svg-inline--fa.fa-w-18{width:1.125em}.svg-inline--fa.fa-w-19{width:1.1875em}.svg-inline--fa.fa-w-20{width:1.25em}.svg-inline--fa.fa-pull-left{margin-right:.3em;width:auto}.svg-inline--fa.fa-pull-right{margin-left:.3em;width:auto}.svg-inline--fa.fa-border{height:1.5em}.svg-inline--fa.fa-li{width:2em}.svg-inline--fa.fa-fw{width:1.25em}.fa-layers svg.svg-inline--fa{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.fa-layers{display:inline-block;height:1em;position:relative;text-align:center;vertical-align:-.125em;width:1em}.fa-layers svg.svg-inline--fa{-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter,.fa-layers-text{display:inline-block;position:absolute;text-align:center}.fa-layers-text{left:50%;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter{background-color:#ff253a;border-radius:1em;-webkit-box-sizing:border-box;box-sizing:border-box;color:#fff;height:1.5em;line-height:1;max-width:5em;min-width:1.5em;overflow:hidden;padding:.25em;right:0;text-overflow:ellipsis;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-bottom-right{bottom:0;right:0;top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:bottom right;transform-origin:bottom right}.fa-layers-bottom-left{bottom:0;left:0;right:auto;top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:bottom left;transform-origin:bottom left}.fa-layers-top-right{right:0;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-top-left{left:0;right:auto;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top left;transform-origin:top left}.fa-lg{font-size:1.3333333333em;line-height:.75em;vertical-align:-.0667em}.fa-xs{font-size:.75em}.fa-sm{font-size:.875em}.fa-1x{font-size:1em}.fa-2x{font-size:2em}.fa-3x{font-size:3em}.fa-4x{font-size:4em}.fa-5x{font-size:5em}.fa-6x{font-size:6em}.fa-7x{font-size:7em}.fa-8x{font-size:8em}.fa-9x{font-size:9em}.fa-10x{font-size:10em}.fa-fw{text-align:center;width:1.25em}.fa-ul{list-style-type:none;margin-left:2.5em;padding-left:0}.fa-ul>li{position:relative}.fa-li{left:-2em;position:absolute;text-align:center;width:2em;line-height:inherit}.fa-border{border:solid .08em #eee;border-radius:.1em;padding:.2em .25em .15em}.fa-pull-left{float:left}.fa-pull-right{float:right}.fa.fa-pull-left,.fab.fa-pull-left,.fal.fa-pull-left,.far.fa-pull-left,.fas.fa-pull-left{margin-right:.3em}.fa.fa-pull-right,.fab.fa-pull-right,.fal.fa-pull-right,.far.fa-pull-right,.fas.fa-pull-right{margin-left:.3em}.fa-spin{-webkit-animation:fa-spin 2s infinite linear;animation:fa-spin 2s infinite linear}.fa-pulse{-webkit-animation:fa-spin 1s infinite steps(8);animation:fa-spin 1s infinite steps(8)}@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}.fa-rotate-90{-webkit-transform:rotate(90deg);transform:rotate(90deg)}.fa-rotate-180{-webkit-transform:rotate(180deg);transform:rotate(180deg)}.fa-rotate-270{-webkit-transform:rotate(270deg);transform:rotate(270deg)}.fa-flip-horizontal{-webkit-transform:scale(-1,1);transform:scale(-1,1)}.fa-flip-vertical{-webkit-transform:scale(1,-1);transform:scale(1,-1)}.fa-flip-both,.fa-flip-horizontal.fa-flip-vertical{-webkit-transform:scale(-1,-1);transform:scale(-1,-1)}:root .fa-flip-both,:root .fa-flip-horizontal,:root .fa-flip-vertical,:root .fa-rotate-180,:root .fa-rotate-270,:root .fa-rotate-90{-webkit-filter:none;filter:none}.fa-stack{display:inline-block;height:2em;position:relative;width:2.5em}.fa-stack-1x,.fa-stack-2x{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.svg-inline--fa.fa-stack-1x{height:1em;width:1.25em}.svg-inline--fa.fa-stack-2x{height:2em;width:2.5em}.fa-inverse{color:#fff}.sr-only{border:0;clip:rect(0,0,0,0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.sr-only-focusable:active,.sr-only-focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto}.svg-inline--fa .fa-primary{fill:var(--fa-primary-color,currentColor);opacity:1;opacity:var(--fa-primary-opacity,1)}.svg-inline--fa .fa-secondary{fill:var(--fa-secondary-color,currentColor);opacity:.4;opacity:var(--fa-secondary-opacity,.4)}.svg-inline--fa.fa-swap-opacity .fa-primary{opacity:.4;opacity:var(--fa-secondary-opacity,.4)}.svg-inline--fa.fa-swap-opacity .fa-secondary{opacity:1;opacity:var(--fa-primary-opacity,1)}.svg-inline--fa mask .fa-primary,.svg-inline--fa mask .fa-secondary{fill:#000}.fad.fa-inverse{color:#fff}</style><link href="./ATI _ ByteDance Intelligent Creation_files/css" rel="stylesheet">
+  <link rel="stylesheet" href="./ATI _ ByteDance Intelligent Creation_files/bulma.min.css">
+  <link rel="stylesheet" href="./ATI _ ByteDance Intelligent Creation_files/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./ATI _ ByteDance Intelligent Creation_files/academicons.min.css">
+  <link rel="stylesheet" href="./ATI _ ByteDance Intelligent Creation_files/index.css">
+  <link rel="stylesheet" href="./ATI _ ByteDance Intelligent Creation_files/carousel.css">
+
+  <script src="./ATI  _ ByteDance Intelligent Creation_files/jquery.min.js"></script>
+  <script defer="" src="./ATI  _ ByteDance Intelligent Creation_files/fontawesome.all.min.js"></script>
+
+  <style>
+    .tab-content strong {
+      color: #fff !important;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .tab-box {
+      background-color: transparent; /* or match your body background */
+      border: none; /* optional: remove border */
+      padding: 0;
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .switch-button {
+      margin: 10px;
+      padding: 10px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 12px;          /* Rounded corners */
+      background-color: #4A90E2;    /* Button color (adjust as needed) */
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.1s ease;
+    }
+
+    .switch-button:hover {
+      background-color: #357ABD;    /* Slightly darker on hover */
+    }
+
+    .switch-button:active {
+      transform: scale(0.98);       /* Small "click" effect */
+    }
+
+    .samples-row {
+      display: flex;
+      gap: 20px; /* space between samples */
+      overflow-x: auto; /* horizontal scroll if needed */
+      padding: 10px;
+    }
+
+    .sample {
+      display: flex;
+      flex-direction: row; /* image and video side by side */
+      align-items: center;
+      gap: 7px;
+      border: 1px solid #ccc;
+      padding: 7px;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+      min-width: fit-content;
+    }
+
+    .sample img,
+    .sample video {
+      height: 180px;      /* ← your chosen uniform height */
+      width: auto;        /* preserve aspect ratio */
+      object-fit: cover;  /* fill the box (or ‘contain’ if you want letter/pillar-boxing) */
+      border-radius: 4px; /* keep if you like those rounded corners */
+    }
+
+    /* tall row */
+    .samples-row–tall .sample img,
+    .samples-row–tall .sample video {
+      height: 320px;
+      width: auto;
+      object-fit: cover;
+    }
+
+    /* short row */
+    .samples-row–short .sample img,
+    .samples-row–short .sample video {
+      height: 220px;
+      width: auto;
+      object-fit: cover;
+    }
+
+    /* two videos share the row */
+    .samples-teaser-demo video {
+      flex: 1 1 0;
+      max-width: 50%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    /* if there’s only one video, let it span 100% */
+    .samples-teaser-demo video:only-child {
+      max-width: 100%;
+      flex: 1 1 100%;
+    }
+  
+    /* two videos, side by side */
+    .samples-large-demo {
+      display: flex;
+      gap: 10px;
+      width: 100%;            /* ensure container can expand */
+    }
+
+    /* force each video to take half the row */
+    .samples-large-demo video {
+      flex: 1 1 0;            /* grow and shrink equally */
+      max-width: 50%;         /* cap at half the container */
+      height: auto;           /* keep aspect ratio */
+      object-fit: cover;      /* fill its box */
+    }
+
+  </style>
+  
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title"><span style="font-family: bradley hand, cursive;">ATI: Any Trajectory Instruction for Controllable Video Generation</span></h1>
+          <div class="publication-authors" style="font-size: 22px;">
+            <span class="author-block">
+              <a class="author-link" href="\" target="_blank">Angtian Wang</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <span class="author-block">
+              <a class="author-link" href="\" target="_blank">Haibin Huang</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <span class="author-block">
+              <a class="author-link" href="\" target="_blank">Jacob Zhiyuan Fang</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <span class="author-block">
+              <a class="author-link" href="\" target="_blank">Yiding Yang</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <span class="author-block">
+              <a class="author-link" href="\" target="_blank">Chongyang Ma</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+          </div>
+
+          <div class="publication-authors" style="font-size: 22px; margin-bottom: 10px;">
+            <span class="author-block">
+              ByteDance Intelligent Creation</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon">
+                      <svg class="svg-inline--fa fa-file-pdf fa-w-12" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file-pdf" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-12.2-33.3-29-42.7-53.8 4.5-18.5 11.6-46.6 6.2-64.2-4.7-29.4-42.4-26.5-47.8-6.8-5 18.3-.4 44.1 8.1 77-11.6 27.6-28.7 64.6-40.8 85.8-.1 0-.1.1-.2.1-27.1 13.9-73.6 44.5-54.5 68 5.6 6.9 16 10 21.5 10 17.9 0 35.7-18 61.1-61.8 25.8-8.5 54.1-19.1 79-23.2 21.7 11.8 47.1 19.5 64 19.5 29.2 0 31.2-32 19.7-43.4-13.9-13.6-54.3-9.7-73.6-7.2zM377 105L279 7c-4.5-4.5-10.6-7-17-7h-6v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-74.1 255.3c4.1-2.7-2.5-11.9-42.8-9 37.1 15.8 42.8 9 42.8 9z"></path></svg><!-- <i class="fas fa-file-pdf"></i> Font Awesome fontawesome.com -->
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon">
+                      <svg class="svg-inline--fa fa-github fa-w-16" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg><!-- <i class="fab fa-github"></i> Font Awesome fontawesome.com -->
+                  </span>
+                  <span>Github (Coming Soon)</span>
+                  </a>
+              </span>
+              <!-- Model Link. -->
+              <span class="link-block">
+                <a href="" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon">
+                    <img src="./ATI _ ByteDance Intelligent Creation_files/ai.svg" alt="SVG Icon" style="width: 18px; height: 18px; background-color: #f5f5f5;">
+                  </span>
+                  <span>Hugging Face (Coming Soon)</span>
+                  </a>
+              </span>
+              </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section class="hero teaser">
+  <div class="column has-text-centered">
+    <div class="is-size-5 publication-authors">
+      <hr style="
+          width: 100%;
+          height: 0.7px;
+          background-color: rgba(255, 255, 255, 0.665);
+          margin-top: -15px;
+        ">
+    </div>
+  </div>
+</section>
+
+
+<section class="section" style="margin-top: -15px">
+  <div class="container is-max-desktop">
+    <!-- Highlight. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-4">🔥 <strong style="color: white;"></strong>Highlight</strong></h2>
+        <div class="content has-text-justified">
+          <ul>
+            <li>🔥 <strong style="color: white;">Any Trajectory Instruction (ATI) is a video generation approach that makes any trajectories you draw on an image into a realistic video.</strong></li>
+            <li>🔥 <strong style="color: white;">(Coming Soon) ATI-Wan2.1 14B model will be publicly available.</strong></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--/ Highlight. -->
+    <div class="samples-teaser-demo">
+      <video src="./ATI _ ByteDance Intelligent Creation_files/Teaser.mp4" controls muted></video>
+    </div>
+
+
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-4">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We present a trajectory-based motion control framework that unifies object, local and camera movements in video generation. 
+            By embedding user-defined keypoint paths into pretrained image-to-video models via a lightweight motion injector, our approach produces temporally coherent, 
+            semantically aligned motion. It excels across tasks—motion brushes, dynamic viewpoints and precise local deformations—offering superior controllability and 
+            visual quality compared to prior and commercial methods, while remaining compatible with diverse state-of-the-art backbones.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <div class="container is-max-desktop">
+      <!-- Method. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-4">Feature-level Instruction of Trajectories</h2>
+          <div class="content has-text-justified">
+            <p>
+              ATI enables fine-grained feature-level Instruction of Trajectories. 
+              Specifically, ATI introduces a Gaussian-based motion injector to encode trajectory signals, spanning local, object-level, and camera motion, directly into the latent space 
+              of a pretrained image-to-video diffusion model. This enables unified and continuous control over both object and camera dynamics.
+            </p>
+          </div>
+        </div>
+      </div>
+    <div class="container is-max-desktop" style="margin-top: 25px">
+      <img src="./ATI _ ByteDance Intelligent Creation_files/Pipeline.jpg" width="100%">
+    </div>
+    <div class="content has-text-centered" style="margin-top: 5px">
+      <p style="font-size:16px; font:caption; font-family:Georgia, &#39;Times New Roman&#39;, Times, serif;">
+        ATI generates the videos from flexible input trajectories, enabling flexible object motion or cameral control. ATI takes an image and user specified trajectories as inputs. The point-wise trajectories are injected into the latent condition for
+the generation. Videos are decoded from the latent denoised from the DiT.
+      </p>
+    </div>
+
+      <div class="container is-max-desktop" style="margin-top: 25px">
+      <img src="./ATI _ ByteDance Intelligent Creation_files/FeaturePlace.png" width="100%">
+        </div>
+          <div class="content has-text-centered" style="margin-top: 5px">
+            <p style="font-size:16px; font:caption; font-family:Georgia, &#39;Times New Roman&#39;, Times, serif;">
+               Trajectory Instruction module computes a latent feature from a point’s trajectory. During inference, given the point’s location in the first frame (i.e., the input image), we sample the feature at that location using bilinear interpolation. We then compute a spatial
+      Gaussian distribution for each visible point on its corresponding location in every subsequent frame.
+            </p>
+          </div>
+          <!--/ Method. -->
+
+
+          <div class="container is-max-desktop">
+            <!-- User Input. -->
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-four-fifths">
+                <h2 class="title is-4">Input Any Trajectory Instruction</h2>
+                <div class="content has-text-justified">
+                  <p>
+                    We provide an interactive editor tools for creating trajectory. This tools allowing user to create free draw trajectories, 
+                    camera zoom in or out trajectories, as well as edit trajectory and applying camera pan move globally.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="columns is-centered">
+              <span class="link-block">
+                <a href="" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon">
+                      <svg class="svg-inline--fa fa-github fa-w-16" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg><!-- <i class="fab fa-github"></i> Font Awesome fontawesome.com -->
+                  </span>
+                  <span>Trajectory Editor (Coming Soon)</span>
+                  </a>
+              </span>
+              <span class="link-block">
+                <a href="" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon">
+                    <img src="./ATI _ ByteDance Intelligent Creation_files/ai.svg" alt="SVG Icon" style="width: 18px; height: 18px; background-color: #f5f5f5;">
+                  </span>
+                  <span>Trajectory Editor Guideline</span>
+                  </a>
+              </span>
+            </div>
+
+            <div class="samples-large-demo">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/EditorEdit.mp4" controls muted></video>
+              <video src="./ATI _ ByteDance Intelligent Creation_files/EditorVideo.mp4" controls muted></video>
+            </div>
+            <div class="content has-text-centered" style="margin-top: 5px">
+              <p style="font-size:16px; font:caption; font-family:Georgia, &#39;Times New Roman&#39;, Times, serif;">
+                Left: process of user drawing trajectories. Right: generated video.
+              </p>
+            </div>
+
+  </div>
+</section>
+
+
+<hr style="
+  width: 100%;
+  height: 0.5px;
+  background-color: rgba(255, 255, 255, 0.665);
+  margin-top: 5px;
+">
+
+<button class="switch-button" onclick="switchTabtoWanX()">Switch to ATI Seaweed 7B</button>
+<button class="switch-button" onclick="switchTabtoSeaweed()">Switch to ATI Wanx 14B</button>
+
+<div id="tab1" class="tab-content tab-box active">
+  <h2>ATI WanX 14B Results</h2>
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div style="margin-left: 50px; margin-right: 50px;">
+        <div class="carousel-container">
+  <!--      <div class="carousel carousel-scroll-left">-->
+  <!--        &lt;!&ndash; Example video &ndash;&gt;-->
+  <!--        <video src="./ATI _ ByteDance Intelligent Creation_files/1_1_viz.mp4" autoplay muted loop playsinline></video>-->
+  <!--      </div>-->
+
+          <div class="samples-row samples-row–tall">
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/02.jpeg" alt="Sample 002">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/002_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/05.jpg" alt="Sample 005">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/005_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/11.jpg" alt="Sample 011">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/011_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/12.png" alt="Sample 012">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/012_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/17.jpg" alt="Sample 017">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/017_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/18.jpg" alt="Sample 018">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/018_viz.mp4" controls muted></video>
+            </div>
+          </div>
+          
+          <!-- Second row: 200px high -->
+          <div class="samples-row samples-row–short">
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/03.jpeg" alt="Sample 003">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/003_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/06.jpg" alt="Sample 006">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/006_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/09.jpeg" alt="Sample 009">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/009_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/08.jpg" alt="Sample 008">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/008_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/10.jpg" alt="Sample 010">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/010_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/22.jpg" alt="Sample 022">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/022_viz.mp4" controls muted></video>
+            </div>
+          </div>
+
+
+          <div class="samples-row samples-row–tall">
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/41.jpg" alt="Sample 041">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/041_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/42.jpg" alt="Sample 042">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/042_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/43.jpg" alt="Sample 043">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/043_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/45.jpg" alt="Sample 045">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/045_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/60.jpg" alt="Sample 060">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/060_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/63.jpg" alt="Sample 063">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/063_viz.mp4" controls muted></video>
+            </div>
+          </div>
+
+          <div class="samples-row samples-row–short">
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/24.jpg" alt="Sample 024">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/024_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/28.jpg" alt="Sample 028">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/028_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/34.jpg" alt="Sample 034">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/034_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/35.jpg" alt="Sample 035">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/035_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/62.jpg" alt="Sample 062">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/062_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/84.jpg" alt="Sample 084">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/084_viz.mp4" controls muted></video>
+            </div>
+          </div>
+
+
+          <div class="samples-row samples-row–tall">
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/64.jpg" alt="Sample 064">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/064_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/66.jpg" alt="Sample 066">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/066_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/68.jpg" alt="Sample 068">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/068_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/70.jpg" alt="Sample 070">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/070_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/77.jpg" alt="Sample 077">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/077_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/97.jpg" alt="Sample 097">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesWanX/097_viz.mp4" controls muted></video>
+            </div>
+          </div>
+
+    </div>
+  </section>
+</div>
+
+<div id="tab2" class="tab-content tab-box">
+  <h2>ATI Seaweed 7B Results</h2>
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div style="margin-left: 50px; margin-right: 50px;">
+        <div class="carousel-container">
+          <div class="samples-row samples-row–tall">
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/02.jpeg" alt="Sample 002">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/3_1_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/05.jpg" alt="Sample 005">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/6_1_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/11.jpg" alt="Sample 011">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/12_1_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/12.png" alt="Sample 012">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/13_1_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/17.jpg" alt="Sample 017">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/18_1_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/18.jpg" alt="Sample 018">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/19_1_viz.mp4" controls muted></video>
+            </div>
+          </div>
+          
+          <!-- Second row: 200px high -->
+          <div class="samples-row samples-row–short">
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/03.jpeg" alt="Sample 003">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/4_1_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/06.jpg" alt="Sample 006">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/7_1_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/09.jpeg" alt="Sample 009">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/10_1_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/08.jpg" alt="Sample 008">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/9_1_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/10.jpg" alt="Sample 010">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/11_1_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/22.jpg" alt="Sample 022">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/23_1_viz.mp4" controls muted></video>
+            </div>
+          </div>
+          
+          <div class="samples-row samples-row–tall">
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/41.jpg" alt="Sample 041">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/42_1_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/42.jpg" alt="Sample 042">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/43_1_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/43.jpg" alt="Sample 043">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/44_1_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/45.jpg" alt="Sample 045">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/46_1_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/60.jpg" alt="Sample 060">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/61_1_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/63.jpg" alt="Sample 063">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/64_1_viz.mp4" controls muted></video>
+            </div>
+          </div>
+          
+          <div class="samples-row samples-row–short">
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/24.jpg" alt="Sample 024">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/25_1_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/28.jpg" alt="Sample 028">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/29_1_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/34.jpg" alt="Sample 034">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/35_1_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/35.jpg" alt="Sample 035">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/36_1_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/62.jpg" alt="Sample 062">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/63_1_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/84.jpg" alt="Sample 084">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/85_1_viz.mp4" controls muted></video>
+            </div>
+          </div>
+          
+          <div class="samples-row samples-row–tall">
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/64.jpg" alt="Sample 064">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/65_1_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/66.jpg" alt="Sample 066">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/67_1_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/68.jpg" alt="Sample 068">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/69_1_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/70.jpg" alt="Sample 070">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/71_1_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/77.jpg" alt="Sample 077">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/78_1_viz.mp4" controls muted></video>
+            </div>
+            <div class="sample">
+              <img src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/97.jpg" alt="Sample 097">
+              <video src="./ATI _ ByteDance Intelligent Creation_files/ExamplesSeaWeed/98_1_viz.mp4" controls muted></video>
+            </div>
+          </div>
+          
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<script>
+    let currentTab = 1;
+
+    function switchTabtoWanX() {
+      document.getElementById(`tab${currentTab}`).classList.remove('active');
+      currentTab = 2;
+      document.getElementById(`tab${currentTab}`).classList.add('active');
+    }
+
+    function switchTabtoSeaweed() {
+      document.getElementById(`tab${currentTab}`).classList.remove('active');
+      currentTab = 1;
+      document.getElementById(`tab${currentTab}`).classList.add('active');
+    }
+</script>
+
+<!--<div class="carousel carousel-scroll-left">-->
+<!--  &lt;!&ndash; Example video &ndash;&gt;-->
+<!--  <video src="./ATI _ ByteDance Intelligent Creation_files/1_1_viz.mp4" autoplay muted loop playsinline></video>-->
+<!--</div>-->
+
+
+<section class="section" style="margin-top: -15px">
+  <div class="container is-max-desktop">
+    <!-- Acknowledgments. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-4">Acknowledgments</h2>
+        <div class="content has-text-justified">
+          <p>
+            We sincerely acknowledge the insightful discussions from Bo Liu, Yizhi Wang, Alex, Xueqin Deng, and Linjie Yang. We greatly appreciate the help from Liming Jiang for website build.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Acknowledgement. -->
+
+  </div>
+</section>
+
+
+<section class="section" style="margin-top: -15px">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-4">Citation BibTeX</h2>
+        <div class="content has-text-justified">
+          <p>
+            If you find InfiniteYou useful for your research or applications, please cite our paper:
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="code-container" style="position: relative;">
+      <script>
+        function handle_copy_click() {
+          const icon_copy = document.getElementById('icon-copy');
+          const icon_done = document.getElementById('icon-done');
+          var code_text = document.getElementById("citation").innerText;
+
+          if (navigator.clipboard && window.isSecureContext) {
+            navigator.clipboard.writeText(code_text)
+              .then(function() {
+                console.log("Code copied to clipboard!");
+                icon_copy.classList.toggle('hidden');
+                icon_done.classList.toggle('hidden');
+              })
+              .catch(function(err) {
+                console.error("Error copying code: " + err);
+              });
+          }
+        }
+      </script>
+      <div class="copy-clipboard-button" role="button" tabindex="0" onclick="handle_copy_click()">
+        <svg id="icon-copy" aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="button-svg-icon">
+          <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+        </svg>
+        <svg id="icon-done" aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="button-svg-icon hidden">
+          <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+        </svg>
+      </div>
+    <pre class="bib-tex"><code id="citation">@article{jiang2025infiniteyou,
+  title={{ATI}: ny Trajectory Instruction for Controllable Video Generation},
+  author={Wang, Angtian and Huang, Haibin and Fang, Zhiyuan and Yang, Yiding, and Ma, Chongyang}
+  journal={arXiv preprint},
+  volume={arXiv:xxxxxxxx},
+  year={2025}
+}</code></pre>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer" style="margin-top: -10px">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p style="text-align: center">
+            The source code of this project page can be found at
+            <span class="publication-authors"><a href="XXX" target="_blank">ATI Github Pages</a></span>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+</body></html>
